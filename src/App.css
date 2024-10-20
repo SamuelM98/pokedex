@@ -1,0 +1,217 @@
+img{
+  width: auto;
+  height: 20vh;
+}
+.pokebola{
+  width: 20px;
+  height: auto;
+  animation: rotation 3s linear infinite;
+}
+
+.boton-buscar{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.boton-buscar *{
+  margin: 3px;
+}
+
+input{
+  width: 50%;
+}
+.buscar{
+  margin: 0 auto;
+}
+
+.texto{
+  font-family: "Fredoka One", "Comic Sans MS", sans-serif;
+}
+
+@keyframes  rotation {
+  from{
+    transform: rotateZ(0deg)
+  }
+  to{
+    transform: rotateZ(360deg);
+  }
+}
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #f5f5f5;
+  font-family: Arial, sans-serif;
+}
+
+.pokedex {
+  display: flex;
+  width: 600px;
+  height: 400px;
+  background-color: #ff4444;
+  border: 10px solid #e60000;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.pokedex-left, .pokedex-right {
+  flex: 1;
+  position: relative;
+}
+
+.pokedex-left {
+  background-color: #ff4d4d;
+  padding: 10px;
+  border-right: 5px solid #e60000;
+}
+
+.pokedex-right {
+  background-color: #cc3333;
+  padding: 10px;
+}
+
+.camera {
+  width: 50px;
+  height: 50px;
+  background-color: #00bfff;
+  border-radius: 50%;
+  border: 5px solid #fff;
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  animation: cambio-r-b 1s linear infinite;
+}
+
+@keyframes cambio-r-b {
+  0%{background-color: #00bfff;}
+  50%{background-color: rgb(228, 63, 63);}
+  100%{background-color: #00bfff;}
+}
+
+
+.indicators {
+  display: flex;
+  justify-content: space-around;
+  margin: 10px 0;
+}
+
+.indicator {
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  border: 2px solid #000;
+}
+
+.red {
+  background-color: #ff0000;
+  animation: cambio-r 1.5s infinite;
+}
+
+.yellow {
+  background-color: #ffff00;
+  animation: cambio-y 1.5s infinite;
+}
+
+.green {
+  background-color: #00ff00;
+  animation: cambio-g 1.5s infinite;
+}
+
+@keyframes cambio-y{
+  0%{background-color: yellow;}
+  33%{background-color: green;}
+  67%{background-color: red;}
+  100%{background-color: yellow;}
+}
+@keyframes cambio-g{
+  0%{background-color: green;}
+  33%{background-color: red;}
+  67%{background-color: yellow;}
+  100%{background-color: green;}
+}
+@keyframes cambio-r{
+  0%{background-color: red;}
+  33%{background-color: yellow;}
+  67%{background-color: green;}
+  100%{background-color: red;}
+}
+
+.screen {
+  background-color: #00ccff;
+  width: 90%;
+  height: 170px;
+  margin: 20px auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border: 5px solid #fff;
+}
+
+.pokemon-greeting {
+  text-transform: capitalize;
+  color: yellow;
+  font-size: 16px;
+  margin-top: 10px;
+}
+
+.controls {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 20px;
+}
+
+
+/* Lado derecho del pokedex */
+.pokedex-right .right-screen {
+  background-color: #0099ff;
+  width: 80%;
+  height: 100px;
+  margin: 20px auto;
+}
+
+.right-screen{
+  padding: 20px;
+}
+
+.buttons {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 30px;
+}
+
+.red-button {
+  width: 30px;
+  height: 30px;
+  background-color: red;
+  border: 2px solid #000;
+  border-radius: 50%;
+  animation: cambio-r 1.5s infinite;
+}
+
+.yellow-button {
+  width: 30px;
+  height: 30px;
+  background-color: #ffff00;
+  border: 2px solid #000;
+  border-radius: 50%;
+  animation: cambio-y 1.5s infinite;
+
+}
+.green-button {
+  width: 30px;
+  height: 30px;
+  background-color: green;
+  border: 2px solid #000;
+  border-radius: 50%;
+  animation: cambio-g 1.5s infinite;
+}
